@@ -1,0 +1,22 @@
+Outra maneira de retornar dados de um banco de dados é por uma query cujos dados já estão tratados antes de chegar  no PowerBI.
+
+Obter dados / banco de dados / SQL erver / nome do servidor
+
+  Abrir opções avançadas e no campo Instrução SQL (Opcional, requer bando de dados) e cole as linhas programadas da query desejada.
+
+  SELECT a.codigo_venda, b.nome_vendedor, c.nome_loja, d.descricao_produto, a.preco_custo, a.valor_unitario, a.quantidade, a.dt_venda, a.dt_entrega
+FROM   dbo.venda AS a INNER JOIN
+             dbo.vendedor AS b ON a.matricula_vendedor = b.matricula_vendedor INNER JOIN
+             dbo.loja AS c ON a.codigo_loja = c.codigo_loja INNER JOIN
+             dbo.produto AS d ON a.codigo_produto = d.codigo_produto
+
+  Digitar o nome do banco de dados na caixa Banco de Dados (opcional), no caso o nome do banco de dados é Empoderdata.
+
+
+  Visualização previa e clique em carregar.
+
+
+Então o banco de dados vai aparecer com a query executada e facilitando o processamento dentro do PowerBI.
+
+  
+  
